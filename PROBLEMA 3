@@ -1,0 +1,19 @@
+#Agregamos los valos que vamos a usar ;mañana, tarde y noche:
+ingresos_mañana = int(input("ingresos de la jornada de la mañana"))
+ingresos_tarde = int(input("ingresos de la jornada de la tarde"))
+ingresos_noche = int(input("ingresos de la jornada de la noche"))
+
+#Agregamos calculos de dia:
+ingresos_totales = ingresos_tarde + ingresos_mañana + ingresos_noche
+
+#agregamos la meta:
+meta = 150.000
+
+#primera salida;valores calculados de el tipo de jornada:
+print("total ingresos del dia es:",ingresos_totales)
+
+#Salida valores de la meta; alcanzada o no alcanzada:
+if ingresos_totales >= meta:
+    print("meta del dia alcanzada :3")
+else:
+    print("meta no alcanzada")            

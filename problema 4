@@ -1,0 +1,31 @@
+#Damos el valor del iva:
+IVA = 0.19
+
+#Ingresamos el punto del valor del precio base del producto:
+precio = float(input("ingrese el valor del producto: "))
+
+#Proceso de verificacion del producto:
+if precio <= 0:
+    print("error:el precio es invalido,intente denuevo. ") 
+#seguimos direccionando con el else las categorias de los productos con indice A1,B2,C3
+else:
+    print("categorias: ")
+    print("1 - producto basico")
+    print("2 - producto estandar")
+    print("3 - producto de lujo")
+
+    categoria = int(input("ingrese codigo de la categoria: "))
+
+#Damos valores finales a los productos por categoria:
+if categoria == 1:
+    valor_final = precio
+elif categoria == 2:
+    valor_final = precio + (precio* IVA)
+elif categoria ==3:
+    valor_final = precio + (precio * IVA) + (precio * 0.05)
+else:
+    print("error categoria invalida, porfavor volver a digitar. ")
+    exit()
+
+#Salida:
+print("el valor del producto es:", valor_final)
